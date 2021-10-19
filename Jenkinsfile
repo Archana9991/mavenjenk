@@ -30,9 +30,11 @@
   
         stage('Slack it'){
             steps {
-                slackSend channel: '#slack-test-channel', 
+                slackSend channel: '#jenkins', 
                           message: 'Hello, world'
             }
         }
     }
 
+}
+}
