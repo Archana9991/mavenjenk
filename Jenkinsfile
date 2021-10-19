@@ -10,7 +10,7 @@
 
                 slackSend channel: '#jenkins', 
 
-                          message: 'success'
+                          message: 'started'
 
             }
 
@@ -42,7 +42,7 @@
       steps {
             
             
-            post {
+            
                 success{
                     slackSend channel: '#jenkins', 
 
@@ -53,7 +53,7 @@
                       
 
                           message: 'failure'
-                }
+                
             }
       }
     }
