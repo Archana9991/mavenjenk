@@ -53,7 +53,8 @@
                  
             }
         }
-        stage('Package') {
+        }
+         stage('Package') {
             steps {
                 echo 'mvn package'
             }
@@ -77,4 +78,4 @@
      
  }
  }
- }
+ 
