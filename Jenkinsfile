@@ -1,12 +1,23 @@
 pipeline {
+
     agent any
 
+
+
     stages {
+
         stage('Slack it'){
+
             steps {
-                slackSend channel: '#jenkins', 
+
+                slackSend channel: 'jenkins', 
+
                           message: 'Hello, world'
+
             }
+
         }
+
     }
+
 }
