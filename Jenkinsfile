@@ -4,6 +4,18 @@
   }
     agent any
     stages {
+     stage('Slack it'){
+
+            steps {
+
+                slackSend channel: '#marketing', 
+
+                          message: 'Hello, world'
+
+            }
+
+        }
+     
         stage('Clean') {
             steps {
                 echo 'Cleaning..'
