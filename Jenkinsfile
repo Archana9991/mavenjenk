@@ -1,28 +1,9 @@
-pipeline {
-
+ pipeline {
+  tools {
+    maven 'Maven3.8.3'
+  }
     agent any
-
-
-
     stages {
-
-//         stage('Slack it'){
-
-//             steps {
-
-//                 slackSend channel: 'jenkins', 
-
-//                           message: 'Hello'
-
-//             }
-//         }
-    
-
-        
-
-
-    
- 
         stage('Clean') {
             steps {
                 echo 'Cleaning..'
@@ -46,5 +27,4 @@ pipeline {
             }
         }
     }
-
-}
+  
