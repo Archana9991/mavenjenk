@@ -12,7 +12,7 @@ pipeline {
 
                 slackSend channel: 'jenkins', 
 
-                          message: 'Hello, world'
+                          message: 'Hello'
 
             }
 
