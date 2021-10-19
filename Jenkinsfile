@@ -39,6 +39,7 @@
             }
         }
      stage("Deploy to slack"){
+      steps {
             
             
             post {
@@ -54,6 +55,7 @@
                           message: 'failure'
                 }
             }
+      }
     }
  }
  }
