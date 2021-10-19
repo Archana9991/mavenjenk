@@ -8,7 +8,7 @@
 
             steps {
 
-                slackSend channel: '#marketing', 
+                slackSend channel: '#jenkins', 
 
                           message: 'Hello, world'
 
