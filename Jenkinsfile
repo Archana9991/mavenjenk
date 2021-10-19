@@ -1,34 +1,12 @@
- pipeline {
-  tools {
-    maven 'Maven3.8.3'
-  }
+pipeline {
     agent any
+
     stages {
-        stage('Clean') {
+        stage('Slack it'){
             steps {
-                echo 'Cleaning..'
-                bat 'mvn -B -DskipTests clean'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-                bat 'mvn test'
-            }
-             post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
-        }
-        stage('Package') {
-            steps {
-                echo 'mvn package'
+                slackSend channel: '#slack-test-channel', 
+                          message: 'Hello, world'
             }
         }
     }
-  
-    
-
-  
 }
