@@ -10,7 +10,7 @@
 
                 slackSend channel: '#jenkins', 
 
-                          message: 'Hello, world'
+                          message: 'success'
 
             }
 
