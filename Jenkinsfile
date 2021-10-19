@@ -21,6 +21,25 @@
                 echo 'Cleaning..'
                 bat 'mvn -B -DskipTests clean'
             }
+         post{
+            
+            
+                success{
+                    slackSend channel: '#jenkins', 
+
+                          message: 'success'
+                }
+                failure{
+                     slackSend channel: '#jenkins', 
+                      
+
+                          message: 'failure'
+                
+            }
+       }
+         
+         
+         
         }
         stage('Test') {
             steps {
@@ -37,10 +56,7 @@
             steps {
                 echo 'mvn package'
             }
-        }
-     stage("Deploy to slack"){
-      steps {
-            
+         post{
             
             
                 success{
@@ -55,7 +71,8 @@
                           message: 'failure'
                 
             }
-      }
-    }
+       }
+        }
+     
  }
  }
