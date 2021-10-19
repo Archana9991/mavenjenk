@@ -50,19 +50,7 @@
                 always {
                     junit 'target/surefire-reports/*.xml'
                  
-                 success{
-                    slackSend channel: '#jenkins', 
-
-                          message: 'successful testing '
-                }
-                failure{
-                     slackSend channel: '#jenkins', 
-                      
-
-                          message: 'failure in test '
-                
-            }
-                }
+                 
             }
         }
         stage('Package') {
