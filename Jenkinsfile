@@ -27,13 +27,13 @@
                 success{
                     slackSend channel: '#jenkins', 
 
-                          message: 'success'
+                          message: 'cleaning successfull'
                 }
                 failure{
                      slackSend channel: '#jenkins', 
                       
 
-                          message: 'failure'
+                          message: 'cleaning failure'
                 
             }
        }
@@ -49,6 +49,19 @@
              post {
                 always {
                     junit 'target/surefire-reports/*.xml'
+                 
+                 success{
+                    slackSend channel: '#jenkins', 
+
+                          message: 'successful testing '
+                }
+                failure{
+                     slackSend channel: '#jenkins', 
+                      
+
+                          message: 'failure in test '
+                
+            }
                 }
             }
         }
@@ -62,13 +75,13 @@
                 success{
                     slackSend channel: '#jenkins', 
 
-                          message: 'success'
+                          message: 'successful packaging '
                 }
                 failure{
                      slackSend channel: '#jenkins', 
                       
 
-                          message: 'failure'
+                          message: 'failure packaging '
                 
             }
        }
