@@ -6,16 +6,16 @@ pipeline {
 
     stages {
 
-        stage('Slack it'){
+//         stage('Slack it'){
 
-            steps {
+//             steps {
 
-                slackSend channel: 'jenkins', 
+//                 slackSend channel: 'jenkins', 
 
-                          message: 'Hello'
+//                           message: 'Hello'
 
-            }
-        }
+//             }
+//         }
     
 
         
