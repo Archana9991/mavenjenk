@@ -38,5 +38,21 @@
                 echo 'mvn package'
             }
         }
+     stage("Deploy to slack"){
+            
+            
+            post {
+                success{
+                    slackSend channel: '#jenkins', 
+
+                          message: 'success'
+                }
+                failure{
+                     slackSend channel: '#jenkins', 
+                      
+
+                          message: 'failure'
+                }
+            }
     }
  }
